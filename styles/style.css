@@ -79,7 +79,38 @@
 .image {
   width: 100%;
   display: block;
-  filter: brightness(0.5);
+}
+
+.image-bus {
+  filter: brightness(0.5) blur(1px);
+}
+
+.image-coffe {
+  filter: brightness(0.5) sepia(0.5);
+}
+
+.image-foto {
+  filter: contrast(0.6);
+}
+
+.image-man {
+  filter: brightness(0.5) invert(0.1);
+}
+
+.image-horses {
+  filter: brightness(0.5) grayscale(0.2);
+}
+
+.image-evening {
+  filter: contrast(0.5);
+}
+
+.image-rise {
+  filter: hue-rotate(90deg);
+}
+
+.image-pine {
+  filter: saturate(0.5);
 }
 
 .button {
@@ -143,7 +174,7 @@
   background-color: #000;
 }
 
-.card__like-button:hover .button__text{
+.card__like-button:hover .button__text {
   color: #fff;
 }
 
