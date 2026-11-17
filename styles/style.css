@@ -122,6 +122,10 @@
   filter: brightness(0.5) grayscale(0.2);
 }
 
+.image-card_filter-saturate-contrast {
+  filter: saturate(0.5) contrast(0.6);
+}
+
 .image-card_filter-hue-rotate {
   filter: hue-rotate(90deg);
 }
