@@ -35,7 +35,7 @@
   background-color: var(--background-basic-color);
   border: solid 2px var(--border-color-basic);
   margin-block: 100px;
-  padding-block: clamp(120px, 6vw, 130px);
+  padding-block: clamp(120px, 100%, 130px);
   padding-inline: clamp(15px, 2vw, 23px);
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@
 }
 
 .text-header {
-  font-size: clamp(14px, 2vw, 23px);
+  font-size: clamp(14px, 5vw, 23px);
 }
 
 .content {
@@ -153,11 +153,11 @@
   border: solid 2px transparent;
   background-color: transparent;
   cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
 .card__like-button {
   min-inline-size: 130px;
-  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -165,7 +165,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: solid 2px var(--border-color-basic);
+  border-color: var(--border-color-basic);
 }
 
 .button {
@@ -229,22 +229,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   margin-block: 50px 100px;
 }
 
 .save__button {
+  display: flex;
   padding-inline: 17px;
   min-block-size: 55px;
+  gap: 8px;
   inline-size: min(335px, 100%);
-
 }
 
 .floppy {
-  display: block;
   flex-shrink: 0;
-  inline-size: 29px;
-  block-size: 29px;
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.dialog__content .floppy {
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .card__label {
@@ -328,7 +332,15 @@
   min-inline-size: 0;
 }
 
-@media (width <= 375px) {
+@media (width <= 400px) {
+  .header{
+    padding-block: clamp(120px, 30%, 130px);
+  }
+
+  .text-header {
+  font-size: clamp(14px, 2vw, 23px);
+  }
+
   .save__button {
     display: grid;
     grid-template-rows: 28px 14px;
@@ -348,9 +360,5 @@
 
   .dialog {
     padding-inline: 38px;
-  }
-
-  .dialog__content {
-    inline-size: calc(100% + 32px);
   }
 }

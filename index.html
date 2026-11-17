@@ -553,36 +553,36 @@
             viewBox="0 0 40 40"
             aria-hidden="true"
           >
-            <use href="./svg/floppy.svg"></use>
+            <use href="./svg/floppy-icon.svg"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
       </div>
     </main>
     <dialog class="dialog" id="save-dialog" aria-labelledby="dialog-title">
-    <div class="dialog__content">
-      <svg
-        class="floppy"
-        width="39"
-        height="39"
-        viewBox="0 0 40 40"
-        aria-hidden="true"
+      <div class="dialog__content">
+        <svg
+          class="floppy"
+          width="39"
+          height="39"
+          viewBox="0 0 40 40"
+          aria-hidden="true"
+        >
+          <use href="./svg/floppy.svg"></use>
+        </svg>
+        <p class="dialog__text" id="dialog-title">
+          Вставьте дискету, чтобы продолжить
+        </p>
+      </div>
+      <button
+        class="button dialog__button"
+        type="button"
+        id="close-dialog-button"
+        onclick="window['save-dialog'].close()"
       >
-        <use href="./svg/floppy.svg"></use>
-      </svg>
-      <p class="dialog__text" id="dialog-title">
-        Вставьте дискету, чтобы продолжить
-      </p>
-    </div>
-    <button
-      class="button dialog__button"
-      type="button"
-      id="close-dialog-button"
-      onclick="window['save-dialog'].close()"
-    >
-      <span class="button__text">ок</span>
-    </button>
-  </dialog>
-  <script src="./scripts/like.js"></script>
+        <span class="button__text">ок</span>
+      </button>
+    </dialog>
+    <script src="./scripts/like.js"></script>
   </body>
 </html>
